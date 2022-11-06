@@ -21,20 +21,13 @@
         class="navbar-header"
         [ngClass]="expandLogo ? 'expand-logo' : ''"
         data-logobg="skin6"
-      >
+      ><img
+      src="assets/images/blacklogo.png" style="width: 160px; padding-left: 60px"
+      alt="homepage"
+      class="dark-logo"
+    />
         <!-- This is for the sidebar toggle which is visible on mobile only -->
-        <a
-          (click)="showMobileMenu = !showMobileMenu"
-          class="
-            nav-toggler
-            waves-effect waves-light
-            d-block d-md-none
-            text-dark
-          "
-          href="javascript:void(0)"
-        >
-          <i [ngClass]="showMobileMenu ? 'ti-close' : 'ti-menu'"></i>
-        </a>
+        
         <!-- ============================================================== -->
         <!-- Logo -->
         <!-- ============================================================== -->
