@@ -1,0 +1,28 @@
+<div class="wrapper fadeInDown mt-5 pt-5">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="../../assets/blacklogo.png" id="icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form #f="ngForm" (ngSubmit)="register(f)">
+            <input type="text" id="firstName" class="fadeIn second" name="firstName" placeholder="First Name" name="firstName" #firstName="ngModel" ngModel />
+            <input type="text" id="lastName" class="fadeIn second" name="lastName" placeholder="Last Name" name="lastName" #lastName="ngModel" ngModel />
+            <input type="email" id="email" class="fadeIn third" name="email" placeholder="Email" required name="email" #email="ngModel" ngModel />
+            <input type="password" id="password" class="fadeIn fourth" name="password" placeholder="Password" required name="password" #password="ngModel" ngModel />
+            <input type="number" id="phoneNumber" class="fadeIn fourth" name="phoneNumber" placeholder="Phone Number" name="phoneNumber" #phoneNumber="ngModel" ngModel />
+            <input type="submit" class="fadeIn fourth" value="Register" />
+        </form>
+        <!-- signup Form -->
+
+        <a>Have already an account?</a>
+
+        <!-- login button -->
+        <div id="formFooter">
+            <input type="submit" class="fadeIn fourth" value="Login Here" routerLink="/login" />
+        </div>
+    </div>
+</div>

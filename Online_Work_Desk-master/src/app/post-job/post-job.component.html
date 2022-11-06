@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="wrapper fadeInDown mt-5 pt-5">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="../../assets/blacklogo.png" id="icon" />
+      </div>
+
+      <!-- JOb post Form -->
+      <form #f="ngForm" (ngSubmit)="postJob(f)">
+        <input type="text" id="title" class="fadeIn second" name="title" placeholder="Job Title" required #Title="ngModel" ngModel/>
+        <input type="text" id="industry" class="fadeIn second" name="industry" placeholder="Industry" required #Tndustry="ngModel" ngModel/>
+        <input type="date" id="startDate" class="fadeIn third" name="startDate" placeholder="Start Date" required #startDate="ngModel" ngModel/>
+        <input type="text" id="estimatedDuration" class="fadeIn third" name="estimatedDuration"
+          placeholder="Estimated Duration" required #estimatedDuration="ngModel" ngModel/>
+        <input type="number" id="price" class="fadeIn fourth" name="price" placeholder="Price" required #Price="ngModel" ngModel/>
+        <input type="text" id="description" class="fadeIn fourth" name="description" placeholder="Description" #Description="ngModel" ngModel/>
+        <label for="jobImageUrl">Select image:</label>
+        <input type="file" id="jobImageUrl" class="fadeIn fourth" name="jobImageUrl" placeholder="Image"
+          accept="image/*" (change)="onFileSelected($event)" #jobImageUrl="ngModel" ngModel/>
+
+
+        <!-- submit button -->
+        <div id="formFooter ">
+          <input type="submit" class="fadeIn fourth" value="Post Job " />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
